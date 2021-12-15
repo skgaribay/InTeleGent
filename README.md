@@ -14,7 +14,7 @@ Organized Chat for Doctors and Patients with Facebook Integration
 # 10. Migrate files (python manage.py migrate)
 # 11. Run the server (python manage.py runserver)
 
-# The server should be up and runing. Open a browser and go to http://127.0.0.1:8000/ (or whatever is stated in cmd
+# The server should be up and runing. Open a browser and go to http://127.0.0.1:8000/ (or whatever is stated in cmd)
 # You should be able to see the homepage
 
 # Every time you want to freshly start the server, repeat steps 3,5,7,9,10,11
