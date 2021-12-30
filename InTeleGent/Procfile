@@ -1,1 +1,0 @@
-web gunicorn InTeleGent.wsgi:application --log-file -
