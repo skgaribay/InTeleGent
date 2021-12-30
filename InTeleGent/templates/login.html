@@ -4,33 +4,30 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href='https://fonts.googleapis.com/css?family=Encode Sans SC' rel='stylesheet'>
+
 
 <body>
 
 <!-- Login screen -->
-<div class="w3-display-container w3-green" style="height:50vw;">
+<div class="w3-display-container w3-teal" style="height:50vw;">
 
   <!-- fb login card -->
-  <div class="w3-display-middle w3-center w3-blue" >
-    <div class="w3-card-4 w3-dark-grey">
-
+  <div class="w3-display-middle w3-center w3-teal" >
+    <div class="w3-card-4 w3-white w3-round-xlarge">
       <div class="w3-container w3-padding-32 w3-center">
-        <h3>InTeleGent</h3>
-        <img class="w3-circle" src="images/nice_call.jpg" alt="Avatar" style="height:300px;width:300px;">
-        <h5>Institute</h5>
-        <div class="w3-button w3-blue" style="width: 100%;">
-          <div class="w3-cell-row">
-            <div class="w3-cell w3-third">
-              <img src="images/fb_logo.png" alt="fb igon" style="height:50px;">
-            </div>
-            <div class="w3-cell w3-rest" > Login</div>
-          </div>
-          
-        </div>
+        {% load static %}
+        <img class="w3-circle w3-border-gray w3-bottombar" src="{% static 'images/415.jpg' %}" alt="Avatar" style="height:250px; width:auto">
+        <h3 style="font-family: 'Encode Sans SC'; font-weight: bold; color: rgb(0,150,136)"">InTeleGent</h3>
+        <a href="dashboard" class="w3-button w3-round-large" style="margin-top:50px; width: 100%; background-color: rgb(66 103 178); padding-top: 10px; padding-bottom: 10px;">
+          {% load static %}
+          <span><img src="{% static 'images/fb_logo.png' %}" alt="fb igon" class="w3-round-medium" style="height:50px;"></span>
+          <span style="color: white; margin-left: 20px; font-family: Arial, sans-serif; font-weight: bold;">Login with Facebook</span>
+        </a>
       </div>
       
     </div>
-
+    <div style="margin-top: 20px;"><a href="#">Setup Your Business</a></div>
   </div>
 </div>
 
@@ -38,7 +35,18 @@
 
 
 <!-- Footer -->
-<footer class="w3-container">
+<footer class="w3-container w3-dark-gray">
+  <div class="w3-center">
+    <div>
+      <span style="margin-left: 10px;"><a href="#" style="text-decoration: none;">Terms of Service</a></span>
+      <span style="margin-left: 10px;"><a href="#" style="text-decoration: none;">Cookies</a></span>
+      <span style="margin-left: 10px;"><a href="about" style="text-decoration: none;">About Us</a></span>
+      <span style="margin-left: 10px;"><a href="#" style="text-decoration: none;">Contact Us</a></span>
+    </div>
+    <div>
+      <span style="margin-left: 10px; font-size:x-small"><a href="https://www.freepik.com/vectors/medical">Logo vector created by redgreystock - www.freepik.com</a></span>
+    </div>
+  </div>
 </footer>
 
 <script>

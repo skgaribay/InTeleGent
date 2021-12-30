@@ -1,0 +1,6 @@
+
+        <div class= "w3-round-large" style="margin-top:50px; width: 100%; background-color: rgb(66 103 178); padding-top: 10px; padding-bottom: 10px;">
+          <div class="w3-cell-row">
+            <span><img src="images/fb_logo.png" alt="fb igon" class="w3-round-medium" style="height:50px;"></span>
+            <span style="color: white; margin-left: 20px; font-family: Arial, sans-serif; font-weight: bold;">Login with Facebook</span>
+          </div>
