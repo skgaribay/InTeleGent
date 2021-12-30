@@ -1,1 +1,1 @@
-web gunicorn InTeleGent.wsgi --log-file -
+web: gunicorn InTeleGent.wsgi --log-file -
