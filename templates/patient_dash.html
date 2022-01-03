@@ -10,8 +10,11 @@
 
 
 <!-- Nav bar -->
-<div class="w3-bar w3-teal w3-card-2">
-    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-light-blue"><img src="images/home.png" style="height: 20px; width: auto;" alt="Home"></a>
+<div class="w3-bar w3-teal w3-card-2" style="margin-bottom: 20px;">
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-light-blue">
+        {% load static %}
+        <img src="{% static 'images/home.png' %}" style="height: 20px; width: auto;" alt="Home">
+    </a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-light-blue w3-hover-text-white" style="font-family: 'Encode Sans SC'; font-weight: bold;">STATISTICS</a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-light-blue w3-hover-text-white" style="font-family: 'Encode Sans SC'; font-weight: bold;"><span>INBOX</span><span class="w3-round-xxlarge w3-white w3-text-teal" style="margin-left: 4px; padding-left: 4px; padding-right: 4px;">13</span></a></a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-light-blue w3-hover-text-white" style="font-family: 'Encode Sans SC'; font-weight: bold;"><span>PATIENT DASHBOARD</span><span class="w3-round-xxlarge w3-white w3-text-teal" style="margin-left: 4px; padding-left: 4px; padding-right: 4px;">4</span></a>
@@ -20,35 +23,42 @@
     <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-light-blue w3-hover-text-white w3-right" style="font-family: 'Encode Sans SC'; font-weight: bold;">LOGOUT</a>
 </div>
 
+<div style="margin-bottom: 40px; font-size: large;">
+    <span class="w3-card-2 w3-border w3-border-white w3-teal w3-round-medium w3-text-white" style="margin-left: 32px; padding-left: 2px; padding-right: 2px;">Dr</span>
+    <span class="w3-text-teal" style="font-family: 'Encode Sans SC';">Juan Dela Cruz</span><span style="color:#b4b4b4">|</span><span style="font-family: 'Encode Sans SC'; color: teal; font-weight: bold;">Dashboard</span>
+</div>
+
 
 <!-- Dashboard -->
 <div class="w3-container w3-white" >
     <!-- Label -->
-    <div class="w3-row w3-text-teal">
-        Patients with history
+    <div>
+        <span class="w3-card-2 w3-border w3-border-teal w3-text-teal w3-round-medium w3-padding-small" style="margin-top: 20px; margin-left: 17px;">Patients with History ▲</span>
     </div>
 
-    
+    <hr style="margin-top: 10px; margin-bottom: 10px; border-width: 2px; color: #009688; background-color: #009688; border-color: #009688; opacity: 70%;">
 
-    <!-- Container for Patients without history-->
-    <div class="w3-row">
+    <!-- Container for Patients with history-->
+    <div class="w3-row" style="margin-bottom: 30px;">
         <!-- Patient 1-->
         <div class="w3-col m3 l3 w3-padding" >
-            <div class="w3-card-4 w3-white">
-                <img src="https://media.gettyimages.com/photos/-picture-id808144682?s=612x612" alt="Alps" style="width:100%;">
+            <div class="w3-card-4 w3-white w3-border w3-border-teal w3-round-medium">
+                {% load static %}
+                <img src="{% static 'images/p3.jpg' %}" alt="Alps" style="width:100%;">
 
 
                 <div class="w3-container">
-                  <h3>Patient Name</h4>
-                  <h4>Some short info</h4>
+                  <h3 style="margin-bottom: -10px;">Dale Saiden Capulong</h3>
+                    <hr style="margin-bottom: -10px; height:2px;border-width:0;color:#b4b4b4;background-color: #b4b4b4">
+                  <h4>Quezon City, Metro Manila | MDD</h4>
                   
                 </div>
 
                 <!-- Extra info on patient -->
                 <div class="w3-opacity w3-padding">Last message 5 mins ago</div>
-                <div class="w3-container w3-border-bottom">Last message content</div>
-                <div class="w3-container w3-border-bottom">Recent Info 1</div>
-                <div class="w3-container w3-border-bottom">Recent Info 2</div>
+                <div class="w3-container w3-border-bottom">Good am po doc. Tanong...</div>
+                <div class="w3-container w3-border-bottom">Switched to SSRI</div>
+                <div class="w3-container w3-border-bottom">Follow-up on Feb 17</div>
                 
                 <!-- Buttons -->
                 <div class="w3-cell-row w3-padding">
@@ -61,12 +71,14 @@
 
         <!-- Patient 2-->
         <div class="w3-col m3 l3 w3-padding" >
-            <div class="w3-card-4 w3-white">
-                <img src="https://media.gettyimages.com/photos/-picture-id808144682?s=612x612" alt="Alps" style="width:100%;">
+            <div class="w3-card-4 w3-white w3-border w3-border-teal w3-round-medium">
+                {% load static %}
+                <img src="{% static 'images/p1.jpg' %}" alt="Alps" style="width:100%;">
                 <div class="w3-container">
                     <div class="w3-container">
-                        <h4>Patient Name</h4>
-                        <p>Some info</p>
+                        <h4 style="margin-bottom: -10px;">Frankie Padilla</h4>
+                        <hr style="margin-bottom: -10px; height:2px;border-width:0;color:#b4b4b4;background-color: #b4b4b4">
+                        <p>Iloilo City, Iloilo | Bipolar</p>
                     </div>
                 </div>
             </div>
@@ -76,41 +88,49 @@
     </div>
 
     <!-- Label2 -->
-    <div class="w3-row w3-text-teal">
-        Patients Without history
+    <div>
+        <span class="w3-card-2 w3-border w3-border-teal w3-text-teal w3-round-medium w3-padding-small" style="margin-left: 17px;">Patients without History ▲</span>
     </div>
 
+    <hr style="margin-top: 10px; margin-bottom: 10px; border-width: 2px; color: #009688; background-color: #009688; border-color: #009688; opacity: 70%;">
+
     <!-- Container for Patients without history-->
-    <div class="w3-row">
+    <div class="w3-row" style="margin-bottom: 30px;">
          <!-- Patient 3-->
         <div class="w3-col m3 l3 w3-padding" >
-            <div class="w3-card-4 w3-white">
-                <img src="https://media.gettyimages.com/photos/-picture-id808144682?s=612x612" alt="Alps" style="width:100%;">
+            <div class="w3-card-4 w3-white w3-border w3-border-teal w3-round-medium">
+                {% load static %}
+                <img src="{% static 'images/p2.jpg' %}" alt="Alps" style="width:100%;">
                 <div class="w3-container">
-                    <h4>Name</h4>
-                    <p>Chat category</p>
+                    <h4 style="margin-bottom: -10px;">Makayla Dipatuan</h4>
+                    <hr style="margin-bottom: -10px; height:2px;border-width:0;color:#b4b4b4;background-color: #b4b4b4">
+                    <p>Consultation</p>
                 </div>
             </div>
         </div>
 
         <!-- Patient 4-->
         <div class="w3-col m3 l3 w3-padding" >
-            <div class="w3-card-4 w3-white">
-                <img src="https://media.gettyimages.com/photos/-picture-id808144682?s=612x612" alt="Alps" style="width:100%;">
+            <div class="w3-card-4 w3-border w3-border-teal w3-round-medium w3-white">
+                {% load static %}
+                <img src="{% static 'images/p4.jpg' %}" alt="Alps" style="width:100%;" class="w3-round-medium">
                 <div class="w3-container">
-                    <h4>Name</h4>
-                    <p>Chat category</p>
+                    <h4 style="margin-bottom: -10px;">Jon Elijah Amadeo</h4>
+                    <hr style="margin-bottom: -10px; height:2px;border-width:0;color:#b4b4b4;background-color: #b4b4b4">
+                    <p style="">Consultation</p>
                 </div>
             </div>
         </div>
       
         <!-- Patient 5-->
         <div class="w3-col m3 l3 w3-padding" >
-            <div class="w3-card-4 w3-white">
-                <img src="https://media.gettyimages.com/photos/-picture-id808144682?s=612x612" alt="Alps" style="width:100%;">
+            <div class="w3-card-4 w3-white w3-border w3-border-teal w3-round-medium">
+                {% load static %}
+                <img src="{% static 'images/p5.jpg' %}" alt="Alps" style="width:100%;">
                 <div class="w3-container ">
-                  <h4>Name</h4>
-                  <p>Chat category</p>
+                  <h4 style="margin-bottom: -10px;">Marlene Alexia Masangkay</h4>
+                  <hr style="margin-bottom: -10px; height:2px;border-width:0;color:#b4b4b4;background-color: #b4b4b4">
+                  <p>Inquiry</p>
                 </div>
             </div>
         </div>
