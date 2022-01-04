@@ -6,7 +6,10 @@ def home_view(request):
     return render(request, "login.html")
 
 def about_view(request):
-    return render(request, 'about.html')
+    return render(request, "about.html")
 
 def dashboard_view(request):
-    return render(request, 'patient_dash.html')
+    return render(request, "patient_dash.html")
+
+def recs_view(request):
+    return render(request, "patient_recs.html")
