@@ -11,7 +11,7 @@
 
 <!-- Nav bar -->
 <div class="w3-bar w3-teal w3-card-2" style="margin-bottom: 20px;">
-    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-light-blue">
+    <a href="{% url 'dashboard' %}" class="w3-bar-item w3-button w3-padding-large w3-hover-light-blue">
         {% load static %}
         <img src="{% static 'images/home.png' %}" style="height: 20px; width: auto;" alt="Home">
     </a>
@@ -20,7 +20,7 @@
     <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-light-blue w3-hover-text-white" style="font-family: 'Encode Sans SC'; font-weight: bold;"><span>PATIENT DASHBOARD</span><span class="w3-round-xxlarge w3-white w3-text-teal" style="margin-left: 4px; padding-left: 4px; padding-right: 4px;">4</span></a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-light-blue w3-hover-text-white" style="font-family: 'Encode Sans SC'; font-weight: bold;">APPOINTMENTS</a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-light-blue w3-hover-text-white" style="font-family: 'Encode Sans SC'; font-weight: bold;">SETTINGS</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-light-blue w3-hover-text-white w3-right" style="font-family: 'Encode Sans SC'; font-weight: bold;">LOGOUT</a>
+    <a href="{% url 'home' %}" class="w3-bar-item w3-button w3-padding-large w3-hover-light-blue w3-hover-text-white w3-right" style="font-family: 'Encode Sans SC'; font-weight: bold;">LOGOUT</a>
 </div>
 
 <div class="w3-border-bottom w3-text-teal" style="margin-left: 32px; margin-right: 32px; padding-bottom: 10px; margin-bottom: 20px;"> 
@@ -176,7 +176,7 @@
         <div>
             <span style="margin-left: 10px;"><a href="#" style="text-decoration: none;">Terms of Service</a></span>
             <span style="margin-left: 10px;"><a href="#" style="text-decoration: none;">Cookies</a></span>
-            <span style="margin-left: 10px;"><a href="about" style="text-decoration: none;">About Us</a></span>
+            <span style="margin-left: 10px;"><a href="{% url 'about' %}" style="text-decoration: none;">About Us</a></span>
             <span style="margin-left: 10px;"><a href="#" style="text-decoration: none;">Contact Us</a></span>
         </div>
         <div>
