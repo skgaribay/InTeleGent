@@ -24,7 +24,7 @@
 </div>
 
 <div class="w3-border-bottom w3-text-teal" style="margin-left: 32px; margin-right: 32px; padding-bottom: 10px; margin-bottom: 20px;"> 
-    <span class="w3-padding" style="opacity: 70%;">✉ Chat</span>
+    <span class="w3-padding" style="opacity: 70%;"><a href="{% url 'chat' %}" style="text-decoration: none;">✉ Chat</a></span>
     <span class="w3-padding" style="border-bottom: 4px solid teal;">▦ Records</span>
     <span class="w3-padding" style="float: right; margin-top: -8px;">Patient Code: aAAsZ</span>
 </div>
@@ -115,7 +115,7 @@
                             <!-- Recent notes -->
                             <div class="w3-container w3-padding">
                                 <div class="w3-container w3-teal">
-                                    <h3>Recent Notes</h3>
+                                    <h3>Recent Notes<span style="float: right">✎</span></h3>
                                 </div>
                                 <div class="w3-container" style="background-color: #009e8e7a;">
                                     <p>
@@ -131,7 +131,7 @@
                             <!-- Medical records -->
                             <div class="w3-container w3-padding">
                                 <div class="w3-container w3-teal">
-                                    <h3>Medical records</h3>
+                                    <h3>Medical records<span style="float: right">✎</span></h3>
                                 </div>
                                 <div class="w3-container" style="background-color: #009e8e7a;">
                                     <table class="w3-table">

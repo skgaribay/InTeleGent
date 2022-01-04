@@ -13,3 +13,6 @@ def dashboard_view(request):
 
 def recs_view(request):
     return render(request, "patient_recs.html")
+
+def chat_view(request):
+    return render(request, "patient_chat.html")
