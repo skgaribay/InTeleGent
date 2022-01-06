@@ -16,3 +16,6 @@ def recs_view(request):
 
 def chat_view(request):
     return render(request, "patient_chat.html")
+
+def book_view(request):
+    return render(request, "book.html")
