@@ -17,8 +17,8 @@
     </a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-light-blue w3-hover-text-white" style="font-family: 'Encode Sans SC'; font-weight: bold;">STATISTICS</a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-light-blue w3-hover-text-white" style="font-family: 'Encode Sans SC'; font-weight: bold;"><span>INBOX</span><span class="w3-round-xxlarge w3-white w3-text-teal" style="margin-left: 4px; padding-left: 4px; padding-right: 4px;">12</span></a></a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-light-blue w3-hover-text-white" style="font-family: 'Encode Sans SC'; font-weight: bold;"><span>PATIENT DASHBOARD</span><span class="w3-round-xxlarge w3-white w3-text-teal" style="margin-left: 4px; padding-left: 4px; padding-right: 4px;">4</span></a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-light-blue w3-hover-text-white" style="font-family: 'Encode Sans SC'; font-weight: bold;">APPOINTMENTS</a>
+    <a href="{% url 'dashboard' %}" class="w3-bar-item w3-button w3-padding-large w3-hover-light-blue w3-hover-text-white" style="font-family: 'Encode Sans SC'; font-weight: bold;"><span>PATIENT DASHBOARD</span><span class="w3-round-xxlarge w3-white w3-text-teal" style="margin-left: 4px; padding-left: 4px; padding-right: 4px;">4</span></a>
+    <a href="{% url 'appointments' %}" class="w3-bar-item w3-button w3-padding-large w3-hover-light-blue w3-hover-text-white" style="font-family: 'Encode Sans SC'; font-weight: bold;">APPOINTMENTS</a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-light-blue w3-hover-text-white" style="font-family: 'Encode Sans SC'; font-weight: bold;">SETTINGS</a>
     <a href="{% url 'home' %}" class="w3-bar-item w3-button w3-padding-large w3-hover-light-blue w3-hover-text-white w3-right" style="font-family: 'Encode Sans SC'; font-weight: bold;">LOGOUT</a>
 </div>
@@ -102,7 +102,7 @@
                             <!-- Book new appointment button -->
                             <div class="w3-container w3-padding" style="float: right;">
                                 <div class="w3-button w3-blue w3-round-large">
-                                    <h3 style="Color:white;">Book appointment</h3>
+                                    <a href="{% url 'book' %}" style="Color:white; text-decoration: none;" target="_blank">Book appointment</h3>
                                 </div>
                             </div>
                             

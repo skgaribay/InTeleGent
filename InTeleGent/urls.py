@@ -25,4 +25,6 @@ urlpatterns = [
     path('dashboard/', dashboard_view, name='dashboard'),
     path('records/', recs_view, name='records'),
     path('chat/', chat_view, name='chat'),
+    path('book/', book_view, name='book'),
+    path('appointments/', appointments_view, name='appointments'),
 ]
