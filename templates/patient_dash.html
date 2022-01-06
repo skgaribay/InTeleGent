@@ -42,11 +42,29 @@
     <div id="div_whis" class="w3-row" style="margin-bottom: 30px;">
         <!-- Patient 1-->
         <div class="w3-col m3 l3 w3-padding" >
-            <div id="div_pat1" class="w3-card-4 w3-white w3-border w3-border-teal w3-round-medium">
+
+            <!-- Ungrown Patient card -->
+            <div id="div_pat0" class="w3-card-4 w3-white w3-border w3-border-teal w3-round-medium" style="display: block;" onclick="grow_onhover()">
                 {% load static %}
                 <img src="{% static 'images/p3.jpg' %}" alt="Patient" style="width:100%;">
 
+                <!-- Minimal information -->
+                <div class="w3-container">
+                    <div class="w3-container">
+                        <h4 style="margin-bottom: -10px;">Dale Capulong</h4>
+                        <hr style="margin-bottom: -10px; height:2px;border-width:0;color:#b4b4b4;background-color: #b4b4b4">
+                        <p>Quezon City, NCR | MDD</p>
+                    </div>
+                </div>
+                
+            </div>
 
+            <!-- Full grown Patient card -->
+            <div id="div_pat1" class="w3-card-4 w3-white w3-border w3-border-teal w3-round-medium" style="display: none;" onclick="grow_onhover()">
+                {% load static %}
+                <img src="{% static 'images/p3.jpg' %}" alt="Patient" style="width:100%;">
+
+                <!-- Minimal information -->
                 <div class="w3-container">
                   <h3 style="margin-bottom: -10px;">Dale Saiden Capulong</h3>
                     <hr style="margin-bottom: -10px; height:2px;border-width:0;color:#b4b4b4;background-color: #b4b4b4">
@@ -104,7 +122,7 @@
                 <div class="w3-container">
                     <h4 style="margin-bottom: -10px;">Makayla Dipatuan</h4>
                     <hr style="margin-bottom: -10px; height:2px;border-width:0;color:#b4b4b4;background-color: #b4b4b4">
-                    <p>Consultation</p>
+                    <p class="w3-blue w3-round w3-center" style="width: 120px;">Consultation</p>
                 </div>
             </div>
         </div>
@@ -117,7 +135,7 @@
                 <div class="w3-container">
                     <h4 style="margin-bottom: -10px;">Jon Elijah Amadeo</h4>
                     <hr style="margin-bottom: -10px; height:2px;border-width:0;color:#b4b4b4;background-color: #b4b4b4">
-                    <p style="">Consultation</p>
+                    <p class="w3-blue w3-round w3-center" style="width: 120px;">Consultation</p>
                 </div>
             </div>
         </div>
@@ -130,7 +148,7 @@
                 <div class="w3-container ">
                   <h4 style="margin-bottom: -10px;">Marlene Alexia Masangkay</h4>
                   <hr style="margin-bottom: -10px; height:2px;border-width:0;color:#b4b4b4;background-color: #b4b4b4">
-                  <p>Inquiry</p>
+                  <p class="w3-green w3-round w3-center" style="width: 120px;">Inquiry</p>
                 </div>
             </div>
         </div>
@@ -162,6 +180,23 @@
             x.style.display = "none";
         }
     }
+
+    // Function to change patient card on hover
+    function grow_onhover() {
+        var x = document.getElementById("div_pat0");
+        var y = document.getElementById("div_pat1");
+
+        if (x.style.display === "block" && y.style.display === "none") {
+            x.style.display = "none";
+            y.style.display = "block";
+        } else {
+            x.style.display = "block";
+            y.style.display = "none";
+        }
+
+        console.log("Hello world!");
+    }
+
 </script>
 
 <!-- Footer -->
