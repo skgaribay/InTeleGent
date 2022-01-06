@@ -33,13 +33,13 @@
 <div class="w3-container w3-white" >
     <!-- Label -->
     <div>
-        <span class="w3-card-2 w3-border w3-border-teal w3-text-teal w3-round-medium w3-padding-small" style="margin-top: 20px; margin-left: 17px;">Patients with History ▲</span>
+        <span class=" w3-button w3-card-2 w3-border w3-border-teal w3-text-teal w3-round-medium w3-padding-small" style="margin-top: 20px; margin-left: 17px;" onclick="hide_whis()">Patients with History ▲</span>
     </div>
 
     <hr style="margin-top: 10px; margin-bottom: 10px; border-width: 2px; color: #009688; background-color: #009688; border-color: #009688; opacity: 70%;">
 
     <!-- Container for Patients with history-->
-    <div class="w3-row" style="margin-bottom: 30px;">
+    <div id="div_whis" class="w3-row" style="margin-bottom: 30px;">
         <!-- Patient 1-->
         <div class="w3-col m3 l3 w3-padding" >
             <div class="w3-card-4 w3-white w3-border w3-border-teal w3-round-medium">
@@ -89,13 +89,13 @@
 
     <!-- Label2 -->
     <div>
-        <span class="w3-card-2 w3-border w3-border-teal w3-text-teal w3-round-medium w3-padding-small" style="margin-left: 17px;">Patients without History ▲</span>
+        <span class="w3-button w3-card-2 w3-border w3-border-teal w3-text-teal w3-round-medium w3-padding-small" style="margin-left: 17px;" onclick="hide_wohis()">Patients without History ▲</span>
     </div>
 
     <hr style="margin-top: 10px; margin-bottom: 10px; border-width: 2px; color: #009688; background-color: #009688; border-color: #009688; opacity: 70%;">
 
     <!-- Container for Patients without history-->
-    <div class="w3-row" style="margin-bottom: 30px;">
+    <div id="div_wohis" class="w3-row" style="margin-bottom: 30px;">
          <!-- Patient 3-->
         <div class="w3-col m3 l3 w3-padding" >
             <div class="w3-card-4 w3-white w3-border w3-border-teal w3-round-medium">
@@ -142,7 +142,25 @@
 </div>
 
 </body>
+<script>
+    function hide_whis() {
+        var x = document.getElementById("div_whis");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
 
+    function hide_wohis() {
+        var x = document.getElementById("div_wohis");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+</script>
 
 <!-- Footer -->
 <footer class="w3-container w3-dark-gray">
