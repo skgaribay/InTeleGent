@@ -17,7 +17,7 @@
     </a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-light-blue w3-hover-text-white" style="font-family: 'Encode Sans SC'; font-weight: bold;">STATISTICS</a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-light-blue w3-hover-text-white" style="font-family: 'Encode Sans SC'; font-weight: bold;"><span>INBOX</span><span class="w3-round-xxlarge w3-white w3-text-teal" style="margin-left: 4px; padding-left: 4px; padding-right: 4px;">13</span></a></a>
-    <a href="{% url 'dashboard' %}" class="w3-bar-item w3-button w3-padding-large w3-hover-light-blue w3-hover-text-white" style="font-family: 'Encode Sans SC'; font-weight: bold;"><span>PATIENT DASHBOARD</span><span class="w3-round-xxlarge w3-white w3-text-teal" style="margin-left: 4px; padding-left: 4px; padding-right: 4px;">4</span></a>
+    <a href="{% url 'dashboard' %}" class="w3-bar-item w3-button w3-padding-large w3-hover-light-blue w3-hover-text-white" style="font-family: 'Encode Sans SC'; font-weight: bold;"><span>PATIENT DASHBOARD</span><span class="w3-round-xxlarge w3-white w3-text-teal" style="margin-left: 4px; padding-left: 4px; padding-right: 4px;">5</span></a>
     <a href="{% url 'appointments' %}" class="w3-bar-item w3-button w3-padding-large w3-hover-light-blue w3-hover-text-white" style="font-family: 'Encode Sans SC'; font-weight: bold;">APPOINTMENTS</a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-light-blue w3-hover-text-white" style="font-family: 'Encode Sans SC'; font-weight: bold;">SETTINGS</a>
     <a href="{% url 'home' %}" class="w3-bar-item w3-button w3-padding-large w3-hover-light-blue w3-hover-text-white w3-right" style="font-family: 'Encode Sans SC'; font-weight: bold;">LOGOUT</a>
@@ -33,13 +33,17 @@
 <div class="w3-container w3-white" >
     <!-- Label -->
     <div>
-        <span class=" w3-button w3-card-2 w3-border w3-border-teal w3-text-teal w3-round-medium w3-padding-small" style="margin-top: 20px; margin-left: 17px;" onclick="hide_whis()">Patients with History ▲</span>
+        <span class=" w3-button w3-card-2 w3-border w3-border-teal w3-text-teal w3-round-medium w3-padding-small" style=" margin-left: 17px;" onclick="hide_whis()">
+            Patients with History ▲
+        </span>
+        <span class="w3-round-xxlarge w3-lime w3-text-white" style="font-size: 20px; margin-left: 4px; padding-left: 4px; padding-right: 4px;">2</span>
+   
     </div>
 
     <hr style="margin-top: 10px; margin-bottom: 10px; border-width: 2px; color: #009688; background-color: #009688; border-color: #009688; opacity: 70%;">
 
     <!-- Container for Patients with history-->
-    <div id="div_whis" class="w3-row" style="margin-bottom: 30px;">
+    <div id="div_whis" class="w3-row" style="margin-bottom: 30px; display: none;">
         <!-- Patient 1-->
         <div class="w3-col m3 l3 w3-padding" >
 
@@ -107,13 +111,16 @@
 
     <!-- Label2 -->
     <div>
-        <span class="w3-button w3-card-2 w3-border w3-border-teal w3-text-teal w3-round-medium w3-padding-small" style="margin-left: 17px;" onclick="hide_wohis()">Patients without History ▲</span>
+        <span class="w3-button w3-card-2 w3-border w3-border-teal w3-text-teal w3-round-medium w3-padding-small" style="margin-left: 17px;" onclick="hide_wohis()">
+            Patients without History ▲
+        </span>
+        <span class="w3-round-xxlarge w3-light-green w3-text-white" style="font-size: 20px; margin-left: 4px; padding-left: 4px; padding-right: 4px;">3</span>
     </div>
 
     <hr style="margin-top: 10px; margin-bottom: 10px; border-width: 2px; color: #009688; background-color: #009688; border-color: #009688; opacity: 70%;">
 
     <!-- Container for Patients without history-->
-    <div id="div_wohis" class="w3-row" style="margin-bottom: 30px;">
+    <div id="div_wohis" class="w3-row" style="margin-bottom: 30px; display: none;">
          <!-- Patient 3-->
         <div class="w3-col m3 l3 w3-padding" >
             <div class="w3-card-4 w3-white w3-border w3-border-teal w3-round-medium">
